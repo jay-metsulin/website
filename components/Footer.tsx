@@ -17,6 +17,7 @@ export default function Footer() {
             {/*<p className="text-sm font-medium text-[#0066cc]">Launching 2026</p>*/}
           </div>
 
+
           {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold text-gray-900 mb-4">Quick Links</h4>
