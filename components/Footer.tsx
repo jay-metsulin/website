@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,11 +8,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="h-7 w-7 rounded-md bg-gradient-to-br from-[#0066cc] to-[#008b8b] flex items-center justify-center">
-                <span className="text-white font-bold text-xs">M</span>
-              </div>
-              <span className="text-white font-semibold tracking-tight">Metsulin</span>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="Metsulin"
+                width={120}
+                height={34}
+                className="h-7 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-white/40 max-w-xs leading-relaxed">
               Developing biosensing technologies and Software as a Medical Device

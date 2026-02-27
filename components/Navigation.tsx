@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -32,15 +33,15 @@ export default function Navigation() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#0066cc] to-[#008b8b] flex items-center justify-center">
-              <span className="text-white font-bold text-sm">M</span>
-            </div>
-            <span className={`text-lg font-semibold tracking-tight transition-colors ${
-              scrolled ? "text-gray-900" : "text-white"
-            }`}>
-              Metsulin
-            </span>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo-branded.png"
+              alt="Metsulin"
+              width={140}
+              height={40}
+              className="h-8 w-auto rounded"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
