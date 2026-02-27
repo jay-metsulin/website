@@ -59,12 +59,6 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="mailto:ceo@metsulin.com"
-              className="ml-4 rounded-full bg-gradient-to-r from-[#0066cc] to-[#008b8b] px-5 py-2 text-sm font-medium text-white transition-all hover:shadow-lg hover:shadow-[#0066cc]/25 hover:scale-105"
-            >
-              Get in Touch
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -101,13 +95,6 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="mailto:ceo@metsulin.com"
-              className="block rounded-lg bg-gradient-to-r from-[#0066cc] to-[#008b8b] px-4 py-2.5 text-sm font-medium text-white text-center mt-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Get in Touch
-            </a>
           </div>
         </div>
       )}
