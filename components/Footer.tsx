@@ -1,13 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Linkedin } from "lucide-react";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/science", label: "Science" },
+    { href: "/for-clinics", label: "For Clinics" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <footer className="bg-[#0a0a0f] border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
+          <div>
             <div className="mb-4">
               <Image
                 src="/logo.png"
@@ -18,22 +28,17 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-white/40 max-w-xs leading-relaxed">
-              Developing biosensing technologies and Software as a Medical Device
-              to support disease prevention and remission programs.
+              The first at-home rapid test for insulin and glucose.
             </p>
           </div>
 
-          {/* Links */}
+          {/* Navigation */}
           <div>
             <h4 className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-4">
               Navigation
             </h4>
             <ul className="space-y-3">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/technology", label: "Technology" },
-                { href: "/about", label: "About" },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -46,28 +51,37 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Connect */}
           <div>
             <h4 className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-4">
-              Contact
+              Connect
             </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="mailto:ceo@metsulin.com"
-                  className="text-sm text-white/40 hover:text-white transition-colors"
-                >
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+            <a
+              href="http://linkedin.com/company/metsulin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Metsulin on LinkedIn"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 p-2.5 text-white/60 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <p className="mt-4 text-sm text-white/40">Menlo Park, CA</p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5">
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="text-center text-xs text-white/30">
-            &copy; {new Date().getFullYear()} Metsulin Corporation. All rights reserved.
+            &copy; {year} Metsulin Corporation. All rights reserved.
           </p>
+          <a
+            href="http://linkedin.com/company/metsulin"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Metsulin on LinkedIn"
+            className="text-white/30 hover:text-white transition-colors"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </footer>

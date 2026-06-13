@@ -19,8 +19,8 @@ export default function Navigation() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/technology", label: "Technology" },
-    { href: "/about", label: "About" },
+    { href: "/science", label: "Science" },
+    { href: "/for-clinics", label: "For Clinics" },
   ];
 
   return (
@@ -59,6 +59,18 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="http://linkedin.com/company/metsulin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`ml-2 rounded-full border px-5 py-2 text-sm font-medium transition-all ${
+                scrolled
+                  ? "text-gray-700 border-gray-300 hover:bg-gray-100"
+                  : "text-white border-white/20 hover:bg-white/10"
+              }`}
+            >
+              Get in Touch
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -95,6 +107,15 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="http://linkedin.com/company/metsulin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-full border border-gray-300 px-4 py-2.5 text-center text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Get in Touch
+            </a>
           </div>
         </div>
       )}
